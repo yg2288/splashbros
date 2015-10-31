@@ -1,0 +1,12 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sample app", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", :controller => "/static_pages", :action => "home" %></li>
+        <li><%= link_to "Help", :controller => "/static_pages", :action => "help" %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
