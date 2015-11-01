@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  attr_accessor :login
+  attr_accessor :login, :invite_code
   
   validates :username,
   :presence => true,
@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     :case_sensitive => false
   }
   
-  validates :invitecode,
+  validates :invite_code,
     on: :create,
     presence: true,
     inclusion: { in: ["oldmanriverwalk"] }
